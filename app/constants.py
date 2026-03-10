@@ -1,0 +1,2 @@
+APP_DATA_DIR_NAME = "data"
+CERT_FILENAME = "MQTT_CA.crt"
