@@ -64,7 +64,7 @@
 <!-- GETTING STARTED -->
 # Getting started
 This repository is part of the **Easy Homelab Server Switch** project.
-If you are exploring it for the first time, start with the **[Project Overview README][project-overview-readme-url]** repository which explains the architecture and interaction between all components.
+If you are exploring it for the first time, start with the **[Project Overview README][project-overview-readme-url]** which explains the architecture and interaction between all components.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- COMPONENTS -->
