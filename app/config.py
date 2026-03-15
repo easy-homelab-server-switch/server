@@ -1,5 +1,5 @@
 MQTT_CONFIG = {
-    "server": "",
+    "ip": "",
     "port": 8883,
     "user": "",
     "pass": ""

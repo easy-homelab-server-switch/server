@@ -25,8 +25,8 @@ class MqttModule:
 
         self.client.will_set(TOPICS["heartbeat"], payload="DEAD", qos=1, retain=True)
 
-        print(f"MQTT: Connecting with ID: {client_id} to {MQTT_CONFIG['server']}...")
-        self.client.connect_async(MQTT_CONFIG["server"], MQTT_CONFIG["port"], 60)
+        print(f"MQTT: Connecting with ID: {client_id} to {MQTT_CONFIG['ip']}...")
+        self.client.connect_async(MQTT_CONFIG["ip"], MQTT_CONFIG["port"], 60)
 
         self.client.reconnect_delay_set(min_delay=1, max_delay=120)
         self.client.loop_forever()
