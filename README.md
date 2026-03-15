@@ -46,6 +46,9 @@
         <li><a href="#paths">Paths</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#configuration">Configuration</a>
+    </li>
   </ol>
 </details>
 
@@ -107,8 +110,19 @@ The server MQTT agent is organized into small modules, each responsible for a sp
 <a id="paths"></a>
 ### Paths (paths.py)
   - Resolves and creates the application data directory.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<!-- CONFIGURATION -->
+# Configuration
+The system is configured via the `config.py` file using environment variables.
+|Category|Variable|Description|
+| :- | :- | :- |
+|MQTT\_CONFIG|ip|The IP address of the cloud cluster in MQTT broker.|
+||port|The secure MQTT port (default: 8883 for TLS)|
+||user|Username used for authenticating with the broker.|
+||pass|Password used for authenticating with the broker.|
+|TOPICS|<a href="https://github.com/easy-homelab-server-switch/docs-project-overview/blob/main/getting-started/roles.md#linux-server"><strong>Check here</strong></a>|<a href="https://github.com/easy-homelab-server-switch/docs-project-overview/blob/main/mqtt/communication-architecture.md"><strong>and here</strong></a>|
+|---|MQTT\_CA\_CERTIFICATE|ISRG Root X1 certificate for validating the MQTT broker connection.|
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [microcontroller-shield]: https://img.shields.io/badge/Microcontroller-8A2BE2
