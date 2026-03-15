@@ -37,7 +37,7 @@
       <a href="#components">Components</a>
       <ul>
         <li><a href="#main">Main</a></li>
-        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#configuration-comp">Configuration</a></li>
         <li><a href="#configuration-module">Configuration module</a></li>
         <li><a href="#mqtt-module">MQTT module</a></li>
         <li><a href="#network-module">Network module</a></li>
@@ -79,7 +79,7 @@ The server MQTT agent is organized into small modules, each responsible for a sp
   - Orchestrates the application. 
   - Executes the system shutdown sequence using dbus-send to communicate with the host's power management service. 
 
-<a id="configuration"></a>
+<a id="configuration-comp"></a>
 ### Configuration (config.py)
   - Defines the central dictionary for broker settings, credentials, and MQTT topic. 
 
