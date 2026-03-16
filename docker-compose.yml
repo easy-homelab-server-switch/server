@@ -1,0 +1,9 @@
+services:
+  mqtt-agent:
+    build: .
+    container_name: mqtt-agent
+    restart: always
+    privileged: true
+    volumes:
+      - /var/run/dbus:/var/run/dbus
+      - /run/systemd/system:/run/systemd/system
