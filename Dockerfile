@@ -1,7 +1,9 @@
 FROM python:3.11-slim
 
+COPY requirements.txt .
+
 RUN apt-get update && apt-get install -y dbus-x11 && rm -rf /var/lib/apt/lists/*
-RUN pip install --no-cache-dir "paho-mqtt>=2.1.0"
+RUN pip install --no-cache-dir -r requirements.txt
 
 WORKDIR /app
 COPY . /app
