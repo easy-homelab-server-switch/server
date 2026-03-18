@@ -78,39 +78,62 @@ The server MQTT agent is organized into small modules, each responsible for a sp
 ### Main (main.py)
   - Orchestrates the application. 
   - Executes the system shutdown sequence using dbus-send to communicate with the host's power management service. 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <a id="configuration-comp"></a>
 ### Configuration (config.py)
   - Defines the central dictionary for broker settings, credentials, and MQTT topic. 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <a id="configuration-module"></a>
 ### Configuration module (config_module.py)
   - Provides validation to ensure all critical parameters are present before the system attempts to start. 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <a id="mqtt-module"></a>
 ### MQTT module (mqtt_module.py)
   - Manages the secure TLS connection to the MQTT broker. 
   - Implements the Last Will and Testament (LWT) feature to automatically broadcast a `"DEAD"` state on `TOPIC_HEARTBEAT` if the agent loses connection (expectedly or unexpectedly). 
   - Subscribes to `TOPIC_SYSTEM` and triggers local actions based on incoming remote commands. 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <a id="network-module"></a>
 ### Network module (net_module.py)
   - Performs network validation by checking physical interface link states and system routing tables. 
   - Verifies actual internet reachability via low-level socket checks to public DNS server. 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <a id="tls-module"></a>
 ### TLS module (tls_module.py)
   - Manages the CA certificate required for secure MQTT communication. 
   - Ensures secure storage and retrieval of certificate data within the application's data directory. 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <a id="environment"></a>
 ### Environment (constants.py)
   - Defines shared constants used across the application.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <a id="paths"></a>
 ### Paths (paths.py)
   - Resolves and creates the application data directory.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#
 
 <!-- CONFIGURATION -->
 # Configuration
