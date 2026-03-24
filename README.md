@@ -75,7 +75,7 @@ If you are exploring it for the first time, start with the **[Project Overview R
 The server MQTT agent is organized into small modules, each responsible for a specific part of the system.
 
 <a id="main"></a>
-### Main (main.py)
+### Main (`main.py`)
   - Orchestrates the application. 
   - Executes the system shutdown sequence using dbus-send to communicate with the host's power management service. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -83,21 +83,21 @@ The server MQTT agent is organized into small modules, each responsible for a sp
 #
 
 <a id="configuration-comp"></a>
-### Configuration (config.py)
+### Configuration (`config.py`)
   - Defines the central dictionary for broker settings, credentials, and MQTT topic. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 #
 
 <a id="configuration-module"></a>
-### Configuration module (config_module.py)
+### Configuration module (`config_module.py`)
   - Provides validation to ensure all critical parameters are present before the system attempts to start. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 #
 
 <a id="mqtt-module"></a>
-### MQTT module (mqtt_module.py)
+### MQTT module (`mqtt_module.py`)
   - Manages the secure TLS connection to the MQTT broker. 
   - Implements the Last Will and Testament (LWT) feature to automatically broadcast a `"DEAD"` state on `TOPIC_HEARTBEAT` if the agent loses connection (expectedly or unexpectedly). 
   - Subscribes to `TOPIC_SYSTEM` and triggers local actions based on incoming remote commands. 
@@ -106,7 +106,7 @@ The server MQTT agent is organized into small modules, each responsible for a sp
 #
 
 <a id="network-module"></a>
-### Network module (net_module.py)
+### Network module (`net_module.py`)
   - Performs network validation by checking physical interface link states and system routing tables. 
   - Verifies actual internet reachability via low-level socket checks to public DNS server. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -114,7 +114,7 @@ The server MQTT agent is organized into small modules, each responsible for a sp
 #
 
 <a id="tls-module"></a>
-### TLS module (tls_module.py)
+### TLS module (`tls_module.py`)
   - Manages the CA certificate required for secure MQTT communication. 
   - Ensures secure storage and retrieval of certificate data within the application's data directory. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -122,14 +122,14 @@ The server MQTT agent is organized into small modules, each responsible for a sp
 #
 
 <a id="environment"></a>
-### Environment (constants.py)
+### Environment (`constants.py`)
   - Defines shared constants used across the application.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 #
 
 <a id="paths"></a>
-### Paths (paths.py)
+### Paths (`paths.py`)
   - Resolves and creates the application data directory.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,7 +144,7 @@ The system is configured via the `config.py` file using environment variables.
 ||port|The secure MQTT port (default: 8883 for TLS)|
 ||user|Username used for authenticating with the broker.|
 ||pass|Password used for authenticating with the broker.|
-|TOPICS|<a href="https://github.com/easy-homelab-server-switch/docs-project-overview/blob/main/getting-started/roles.md#linux-server"><strong>Check here</strong></a>|<a href="https://github.com/easy-homelab-server-switch/docs-project-overview/blob/main/mqtt/communication-architecture.md"><strong>and here</strong></a>|
+|TOPICS|<a href="https://github.com/easy-homelab-server-switch/docs-project-overview/blob/main/README.md#roles-linux-server"><strong>Check here</strong></a>|<a href="https://github.com/easy-homelab-server-switch/docs-project-overview/blob/main/README.md#communication-architecture"><strong>and here</strong></a>|
 |---|MQTT\_CA\_CERTIFICATE|ISRG Root X1 certificate for validating the MQTT broker connection.|
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
